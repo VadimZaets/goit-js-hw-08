@@ -19,11 +19,8 @@ function onFormSubmit(event) {
   event.preventDefault();
 
   if (!formData[refs.input.name] || !formData[refs.textarea.name]) {
-    console.log('заполните все поля формы');
+    alert('заполните все поля формы');
   } else {
-    console.log(formData);
-    console.log('отправляем форму');
-
     event.currentTarget.reset();
 
     localStorage.removeItem(STORAGE_KEY);
